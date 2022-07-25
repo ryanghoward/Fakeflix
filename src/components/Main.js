@@ -11,7 +11,6 @@ const Main = () => {
       setMovies(resp.data.results);
     });
   }, []);
-  // console.log(movie);
 
   const truncateString = (string, number) => {
     if (string?.length > number) {

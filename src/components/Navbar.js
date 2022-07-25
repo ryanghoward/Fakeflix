@@ -1,11 +1,11 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
+import FF from "./Fakeflix.png";
 
 const Navbar = () => {
   const { user, logOut } = UserAuth();
   const navigate = useNavigate();
-  // console.log(user);
 
   const handleLogout = async () => {
     try {
@@ -20,7 +20,7 @@ const Navbar = () => {
     <div className='flex items-center justify-between p-4 z-[100] w-full absolute'>
       <Link to='/'>
         <h1 className='text-red-600 text-4xl font-bold cursor-pointer'>
-          FAKEFLIX
+          <img className='h-[3.5rem] w-[full]' src={FF} alt='Logo' />
         </h1>
       </Link>
       {user?.email ? (
